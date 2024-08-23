@@ -2,7 +2,7 @@ class Solution {
     public int[] searchRange(int[] nums, int target) {
     int[] ans={-1,-1};
         int start=search(nums,target,true);
-        int end= search(nums,target,false);
+        int end = search(nums,target,false);
         ans[0]=start;
         ans[1]=end;
         return ans;
@@ -13,9 +13,9 @@ class Solution {
         int end=nums.length-1;
         while(start<=end){
             int mid=start+(end-start)/2;
-            if(nums[mid]<target){
+            if(target>nums[mid]){
                 start=mid+1;
-            }else if(nums[mid]>target){
+            }else if(target<nums[mid]){
                 end=mid-1;
             }else{
                 ans=mid;
