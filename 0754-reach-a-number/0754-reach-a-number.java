@@ -1,6 +1,6 @@
 class Solution {
     public int reachNumber(int target) {
-      int sum=0;
+       int sum=0;
         int steps=0;
         target=Math.abs(target);
         while(sum<target){
@@ -12,6 +12,5 @@ class Solution {
             steps++;
         }
         return steps-1;
-        
     }
 }
